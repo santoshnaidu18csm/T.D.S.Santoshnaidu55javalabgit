@@ -1,23 +1,18 @@
-class C {
-	void m1()
-	{
-		System.out.println("A");
-	}
-	
-int i=10;
-}
-class B extends C
+interface A
 {
-	void m2 () {
-		System.out.println("B");
-	}
+ public void aaa();
 }
-	class A {
-	public static void main(String[] args)
-	{
-    B b=new B();
-   System.out.println(b.i);
-b.m1();
-b.m2();
-	}
-	}	
+interface B
+{
+ public void aaa();
+}
+class Main implements A, B {
+ public void aaa ()
+ {
+System.out.print ("Hi");
+ }
+ public static void main(String args[]){
+Main obj = new Main ();
+obj.aaa ();
+ }
+}
